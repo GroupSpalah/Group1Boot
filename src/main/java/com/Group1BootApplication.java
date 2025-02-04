@@ -3,7 +3,7 @@ package com;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.service")
 public class Group1BootApplication {
 
 	public static void main(String[] args) {
