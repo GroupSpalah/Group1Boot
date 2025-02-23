@@ -7,7 +7,6 @@ import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-import org.springframework.stereotype.Repository;
 
 //@Repository("manRepository")
 public interface ManRepository extends JpaRepository<Man, Integer> {
@@ -23,5 +22,7 @@ public interface ManRepository extends JpaRepository<Man, Integer> {
 
     @EntityGraph(attributePaths = {"emails", "phone"})
     Page<Man> findAll(Pageable pageable);
+
+    boolean existsByName(String name);
 
 }
